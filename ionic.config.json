@@ -1,0 +1,7 @@
+{
+  "name": "firebaseTest4MergeImg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
