@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'page-map',
+    loadChildren: () => import('./page-map/page-map.module').then( m => m.PageMapPageModule)
+  },
 ];
 
 @NgModule({

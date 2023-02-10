@@ -7,14 +7,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list *ngIf="isDeliveryDataLoad">
+    <ion-item *ngFor="let docs of documents" >
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      <ion-label class="ion-text-wrap"><h2>{{docs.status[0]}}</h2></ion-label>
+    </ion-item>
+  </ion-list>
+  <ul>
+    <li *ngFor="let document of documents">
+      {{document.name | json}}
+    </li>
+  </ul>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+
+  </ion-list>
+  
 </ion-content>
